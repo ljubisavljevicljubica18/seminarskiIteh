@@ -1,0 +1,18 @@
+body{
+    background-image: url('https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    background-color: white;
+    color: black;
+    /*border: 0.2vw solid rgb(238, 16, 90);*/
+    border-radius: 5%;
+    width: 25vw;
+    height: 50vh;
+    opacity: 0.5;
+    margin-top: 15%;
+    margin-left: 35%;
+    position: absolute;
+}

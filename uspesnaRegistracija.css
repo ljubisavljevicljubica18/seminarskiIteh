@@ -1,0 +1,16 @@
+body{
+    background-image: url('https://media.giphy.com/media/xTiTnxpQ3ghPiB2Hp6/giphy.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.uspesno{
+    background-color: white;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 25%;
+    text-align: center;
+}
+#prijava{
+    color: #000090;
+    font-size: 33px;
+}
