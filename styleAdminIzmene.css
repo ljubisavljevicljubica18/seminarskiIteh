@@ -2,7 +2,8 @@
 
 #banner
 {
-    background-image: url(slike/p14.jpg);
+    background-image: url('admin.jpg');
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -13,21 +14,13 @@
 }
 .promo-title
 {
-    /*font-size: 75px;*/
     font-size: 5vw;
     font-family: fantasy;
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 0px;
     margin-left: 40px;
-    /*font-family: sans-serif;
-    text-align: center;
-    margin-top: 150px;
-    font-size: 150px;
-    font-weight: 800px;*/
     color:transparent;
-    /*color: #990000;*/
-    /*background-image: url(https://media.giphy.com/media/3ov9k1173PdfJWRsoE/giphy.gif);*/
     background-image: linear-gradient(#000000, #000000);
     background-position: center;
     -webkit-background-clip: text;
@@ -79,7 +72,8 @@ body
 }
 .navbar
 {
-    background-image: linear-gradient(to right, #f4c2c2, #f4c2c2);
+    background-image: linear-gradient(to right, #000090, #000090);
+    color: white;
     padding: 0 !important;
 }
 .navbar-brand img
@@ -95,7 +89,7 @@ body
 
 .navbar-nav li a
 {
-    color: #000000 !important;
+    color: white !important;
     font-weight: 600;
     float: right;
     text-align: left;
@@ -103,7 +97,6 @@ body
 
 .navbar-nav li a:hover
 {
-    /*color: #b11d98 !important;*/
     opacity: 0.5;
     font-weight: 600;
     float: right;
@@ -119,12 +112,9 @@ body
     outline: none !important;
 }
 
-/***********************************************INSERT*************************************************/
-
 #services
 {
     padding: 30px 0;
-    /*background-color: #fbe9e9;*/
     background-color: #e8f6fc;
 }
 .services-img
@@ -154,7 +144,7 @@ body
 .title::before
 {
     content:'';
-    background:#f4c2c2;
+    background:#000090;
     height: 5px;
     width: 200px;
     margin-left: auto;
@@ -165,7 +155,7 @@ body
 .title::after
 {
     content:'';
-    background:#f4c2c2;
+    background:#000090;
     height: 10px;
     width: 50px;
     margin-left: auto;
@@ -174,14 +164,7 @@ body
     display: block;
     transform: translateY(8px);
 }
-/*#services .btn-primary
-{
-    box-shadow: none;
-    padding: 8px 25px;
-    border: none;
-    border-radius: 20px;
-    background-image: linear-gradient(to right, #028800, #024500);
-}*/
+
 #majmun
 {
     height: 100px;
@@ -190,12 +173,7 @@ body
     margin-right: auto;
     border-radius: 50px;
 }
-/*.slike
-{
-    width:600px;
-    height:400px;
-    opacity: 0.75;
-}*/
+
 .slike
 {
     width:700px;
@@ -208,7 +186,6 @@ body
     height: 700px;
 }
 
-/*--------About us section-----------*/
 
 #insert
 {
@@ -218,9 +195,7 @@ body
 }
 #zajedno
 {
-    /*background-image: url(palmepozadina1.jpg);*/
     background-size: cover;
-    /*background-opacity:*/
 }
 .about-title
 {
@@ -279,28 +254,28 @@ body
 
 #tipTekst{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 3vw;
     width: 20vw;
 }
 #tipTekst2{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 1.7vw;
     width: 20vw;
 }
 #tipTekst3{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 3.2vw;
     width: 20vw;
 }
 #tipTekst4{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 0.5vw;
     width: 20vw;
@@ -308,35 +283,35 @@ body
 
 #tipId{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 0.5vw;
     width: 14.6vw;
 }
 #tekst1{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 3vw;
     width: 20vw;
 }
 #tekst2{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 3.4vw;
     width: 20vw;
 }
 #tekst3{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 3.1vw;
     width: 20vw;
 }
 #tekst4{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 0.5vw;
     width: 20vw;
@@ -344,7 +319,7 @@ body
 
 #tipId1{
     color: black;
-    background-color: #f4c2c2;
+    background-color: white;
     border-radius: 5%;
     margin-left: 0.5vw;
     width: 14.6vw;

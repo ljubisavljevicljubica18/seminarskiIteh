@@ -10,20 +10,16 @@ body{
 }
 
 #navbar{
-    /*background-image: linear-gradient(to right, #f4c2c2, #f4c2c2);*/
     background: linear-gradient(to right, #e6f2ff, #99ccff);
     color: #000000;
 }
 
 #text{
-    color : #000000;
+    color : white;
 }
-
-/******************************************/
 
 #images{
     width: auto;
-    /*height: 200px;*/
     height: 30vh;
 }
 
@@ -48,7 +44,6 @@ img.details{
     height: 200px;
 }
 
-/*--------------------Banner-----------------------*/
 
 .slider{
     position: absolute;
@@ -71,7 +66,7 @@ nav{
 #logo{
     grid-column: 2/3;
     font-size: 2vw;
-    background-image: linear-gradient(to right, #f4c2c2, #f4c2c2);
+    background-image: linear-gradient(to right, #000090, #000090);
     color: black;
     margin-left: 1%;
     margin-right: 1%;
@@ -88,7 +83,6 @@ nav{
     height: 60%;
     width: 100%;
     position: relative;
-    background: url(slike/11.jpg);
 }
 
 .hero img{
@@ -101,12 +95,11 @@ nav{
     position: absolute;
     top: 70%;
     left: 10%;
-    /*font-size: 100px;*/
     font-size: 5vw;
     font-family: fantasy;
     font-weight: 600;
     transform: translate(-20%, -70%);
-    color: black;
+    color: white;
     z-index: 3;
 }
 
@@ -121,12 +114,9 @@ nav{
     opacity: 0.1;
 }
 
-/*.col-md-2{
-    background: linear-gradient(to right, #e6f2ff, #99ccff);
-}*/
-
 .col-md-3{
-    background-color: #f4c2c2;
+    background-color: #000090;
+    color:white;
 }
 
 .dugme{
@@ -151,8 +141,8 @@ nav{
     padding: 8px 25px;
     border: none;
     border-radius: 20px;
-    color: black;
-    background-image: linear-gradient(to right, #efa9a9, #e77e7e);
+    color: white;
+    background-image: linear-gradient(to right, #000090, #000090);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -166,8 +156,8 @@ nav{
     padding: 8px 25px;
     border: none;
     border-radius: 20px;
-    color: black;
-    background-image: linear-gradient(to right, #efa9a9, #e77e7e);
+    color: white;
+    background-image: linear-gradient(to right, #000090, #000090);
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -186,9 +176,7 @@ nav{
 
 #zajedno
 {
-    /*background-image: url(palmepozadina1.jpg);*/
     background-size: cover;
-    /*background-opacity:*/
 }
 
 #majmun
@@ -201,44 +189,44 @@ nav{
 }
 
 #tipTekst{
-    color: black;
-    background-color: #f4c2c2;
+    color: white;
+    background-color: #99ccff;
     border-radius: 5%;
     margin-left: 6vw;
     width: 20vw;
 }
 #tipTekst2{
-    color: black;
-    background-color: #f4c2c2;
+    color: white;
+    background-color: #99ccff;
     border-radius: 5%;
     margin-left: 4vw;
     width: 20vw;
 }
 #tipTekst3{
-    color: black;
-    background-color: #f4c2c2;
+    color: white;
+    background-color: #99ccff;
     border-radius: 5%;
     margin-left: 4.2vw;
     width: 20vw;
 }
 #tipTekst4{
-    color: black;
-    background-color: #f4c2c2;
+    color: white;
+    background-color: #99ccff;
     border-radius: 5%;
     margin-left: 5.2vw;
     width: 20vw;
 }
 #tipTekst5{
-    color: black;
-    background-color: #f4c2c2;
+    color: white;
+    background-color: #99ccff;
     border-radius: 5%;
     margin-left: 4.3vw;
     width: 20vw;
 }
 
 #tipTekst6{
-    color: black;
-    background-color: #f4c2c2;
+    color: white;
+    background-color: #99ccff;
     border-radius: 5%;
     margin-left: 1.1vw;
     width: 20vw;
@@ -254,13 +242,12 @@ nav{
     color: black;
     display: block;
     margin-left: 10vw;
-    /*margin-right: auto;*/
     border: 0.2vw solid rgb(238, 16, 90);
 }
 
 #banner
 {
-    background-image: url('https://media.giphy.com/media/3ov9k1173PdfJWRsoE/giphy.gif');
+    background-image: url('katalogPozadina.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -271,7 +258,6 @@ nav{
 }
 .promo-title
 {
-    /*font-size: 75px;*/
     font-size: 5vw;
     font-family: fantasy;
     font-weight: 600;
@@ -279,13 +265,8 @@ nav{
     margin-bottom: 0px;
     margin-left: 40px;
     color: white;
-    /*font-family: sans-serif;
-    text-align: center;
-    margin-top: 150px;
-    font-size: 150px;
-    font-weight: 800px;*/
-    /*color: #990000;*/
-    /*background-image: url(https://media.giphy.com/media/3ov9k1173PdfJWRsoE/giphy.gif);*/
+    border: #000090;
+    text-shadow: 2px 0 0 #000090, -2px 0 0 #000090, 0 2px 0 #000090, 0 -2px 0 #000090, 1px 1px #000090, -1px -1px 0 #000090, 1px -1px 0 #000090, -1px 1px 0 #000090;
     background-image: linear-gradient(#000000, #000000);
     background-position: center;
     -webkit-background-clip: text;

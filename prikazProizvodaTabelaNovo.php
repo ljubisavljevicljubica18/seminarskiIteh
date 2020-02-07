@@ -11,31 +11,25 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Admin</title>
-    <!--<link rel = "stylesheet" href = "styleKatalog.css" />-->
+
     <link rel = "stylesheet" href = "stylePrikazTabeleMalaDopuna.css" />
     <link rel = "stylesheet" href = "bootstrap.min.css" />
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
     </script>
     <script src = "bootstrap.min.js"></script>
 
-    <!--<script type="text/javascript" src="jquery-1.10.2.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $(".obrisi_link").click(function(){
-                var vrednost = ($(this).attr("id")).substring(7);
-                var red_tabele = $(this);
-                $.get("obrisiProizvodIzTabele.php", { id: vrednost },
-                    function(data){
-                    if (data == 1){
-                        $(red_tabele).parent().parent().remove();
-                    }   
-                });
-            });
-        });
-    </script>-->
+    <script src="jquery-1.10.2.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $(".tabela").DataTable();
+    });
+    </script>
     
 </head>
 <body>
@@ -45,7 +39,7 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
 <div class = "col-md-8">
         <div class = "row">
 
-        <table border ="1" width="600" cellpadding="5" cellspacing="2" style="text-align:center ">
+        <table border ="1" width="600" cellpadding="5" cellspacing="2" style="text-align:center " class="tabela">
                 <thead>
                     <tr>
                         <th>Id</th>

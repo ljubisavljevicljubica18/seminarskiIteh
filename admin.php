@@ -7,20 +7,6 @@
 
 ?>
 
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Admin</title>
-</head>
-<body>
-    <div>Dobrodošli <?php /*echo $_SESSION['user1'];*/ ?></div>
-    <a href="odjaviMe.php">Odjavi me</a>
-</body>
-</html>-->
-
 <!DOCTYPE html>
 
 <?php
@@ -113,16 +99,6 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
                             function(data){
                                 $("#popuni").html(data);
                         });
-                        /*$ajax({
-                            url:"ajaxKatalogZaPrikaz.php",
-                            data{
-                                id:vrednost
-                            },
-                            type:"get",
-                            success:function(data){
-                                $("#popuni").html(data);
-                            }
-                        });*/
                 });
         });
     </script>
@@ -134,12 +110,8 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <p class="promo-title">Makeup studio Bojan Vukadinov</p>
-                    <div>Dobrodošli <?php echo $_SESSION['user1']; ?></div>
-                    <!--<p id="ispod">The company for women</p>-->
-                </div>
-                <div class="col-md-6 text-center">
-                    <!--<img src ="slike/pozadinak11.jpg" class="img-fluid">-->
+                    <h1 style="color:black; font-size:80px"><b>Makeup studio Bojan Vukadinov</b></h1>
+                    <h5 style="color:black">Dobrodošli <?php echo $_SESSION['user1']; ?></h5>
                 </div>
             </div>
         </div>
@@ -193,9 +165,6 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
         </div>
     </section>
 
-    <div class = "parallax5">
-        </div>
-
     <section id="insert">
         <div id="zajedno">
             <div class="container">
@@ -205,7 +174,15 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
                            <div id="poruka"></div><br><br>
             Unesite url slike: <input type="text" name="slikaDodavanje" id="tipTekst2"><br><br>
             Unesite cenu: <input type="text" name="cenaDodavanje" id="tipTekst3"><br><br>
-            Unesite kategoriju: <input type="text" name="kategorijaDodavanje" id="tipTekst4"><br><br>
+
+            Izaberite kategoriju:
+            <select id="kategorijaa" name="kategorijaa">
+                <option value="1">Palete senki</option>
+                <option value="2">Karmini</option>
+                <option value="3">Cetkice za sminkanje</option>
+            </select>
+
+            <br><br>
             <input type="submit" name ="dodaj" value="Dodaj" class="btn-primary"><br>
         </form>
         <?php
@@ -213,7 +190,16 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
                 $naziv=$_POST["nazivDodavanje"];
                 $slika=$_POST["slikaDodavanje"];
                 $cena=$_POST["cenaDodavanje"];
-                $kategorija=$_POST["kategorijaDodavanje"];
+
+                $kategorijaa = filter_input(INPUT_POST, "kategorijaa");
+                if ($kategorijaa == 1) {
+                    $kategorija = 1;
+                } elseif ($kategorijaa == 2) {
+                    $kategorija = 2;
+                } elseif ($kategorijaa == 3) {
+                    $kategorija = 3;
+                }
+
                 $kolone = "naziv, slika, cena, kategorija";
                 $db->insert("proizvodi", $naziv, $slika, $cena, $kategorija, $kolone);
             }
@@ -221,9 +207,6 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
             </div>
         </div>
     </section>
-
-    <div class = "parallax2">
-        </div>
 
         <section id="update">
         <div id="zajedno">
@@ -254,9 +237,6 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
         </div>
     </section>
 
-    <div class = "parallax3">
-        </div>
-
     <section id="delete">
         <div id="zajedno">
             <div class="container">
@@ -277,71 +257,6 @@ $crudKategorije = new DatabaseKategorijeNovo("makeupstudiobojanvukadinov");
             </div>
         </div>
     </section>
-
-    <div class = "parallax4">
-        </div>
-
-
-    <!--<div>
-        <h3>Brisanje-DELETE</h3>
-        <form action="adminIzmene.php" method="post">
-            Unesite id za brisanje: <input type="text" name="idBrisanje"><br>
-            <input type="submit" name ="obrisi" value="Obrisi">
-        </form>
-        <?/*php
-            if(isset($_POST["obrisi"])){
-                $id=$_POST["idBrisanje"];
-                $id=(int)$id;
-                $db->delete("avonproizvodi", $id);
-            }*/
-        ?>
-    </div>-->
-
-    <!---<div>
-        <h3>Izmena-UPDATE</h3>
-        <form action="adminIzmene.php" method="post">
-            Unesite id za izmenu: <input type="text" name="idIzmena"><br>
-            Naziv: <input type="text" name="nazivIzmena"><br>
-            Slika: <input type="text" name="slikaIzmena"><br>
-            Cena: <input type="text" name="cenaIzmena"><br>
-            Kategorija: <input type="text" name="kategorijaIzmena"><br>
-            <input type="submit" name ="izmeni" value="Izmeni">
-        </form>
-        <?/*php
-            if(isset($_POST["izmeni"])){
-                $id=$_POST["idIzmena"];
-                $naziv=$_POST["nazivIzmena"];
-                $slika=$_POST["slikaIzmena"];
-                $cena=$_POST["cenaIzmena"];
-                $kategorija=$_POST["kategorijaIzmena"];
-                $nizVrednosti = array($id, $naziv, $slika, $cena, $kategorija);
-                $db->update("avonproizvodi", $nizVrednosti);
-            }*/
-        ?>
-    </div>--->
-
-    <!---<div>
-        <h3>Dodavanje-INSERT</h3>
-        <form action="adminIzmene.php" method="post">
-            Unesite naziv: <input type="text" name="nazivDodavanje"><br>
-            Unesite url slike: <input type="text" name="slikaDodavanje"><br>
-            Unesite cenu: <input type="text" name="cenaDodavanje"><br>
-            Unesite kategoriju: <input type="text" name="kategorijaDodavanje"><br>
-            <input type="submit" name ="dodaj" value="Dodaj">
-        </form>
-        <?/*php
-            if(isset($_POST["dodaj"])){
-                $naziv=$_POST["nazivDodavanje"];
-                $slika=$_POST["slikaDodavanje"];
-                $cena=$_POST["cenaDodavanje"];
-                $kategorija=$_POST["kategorijaDodavanje"];
-                $kolone = "naziv, slika, cena, kategorija";
-                $db->insert("avonproizvodi", $naziv, $slika, $cena, $kategorija, $kolone);
-            }*/
-        ?>
-    </div>--->
-
-    <!-----------Smooth scroll-------------->
 
     <script src="smooth-scroll.js">
         var scroll = new SmoothScroll('a[href*="#"]');

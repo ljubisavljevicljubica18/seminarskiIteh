@@ -24,11 +24,10 @@ $baza = new DatabasePorudzbina("makeupstudiobojanvukadinov");
     <header>
         <nav>
             <h3 id="logo">MOJA KORPA</h3>
-            <!--<img class="slikaKataloga" src="slike/log.jpg" alt="Avon Katalog">-->
         </nav>
         <section class="sekcija">
         <div class="hero">
-            <img class="slikaKataloga" src="slike/p4.jpg" alt="">
+            <img class="slikaKataloga" src="cetkicaPozadina1.jpg" alt="">
             <h1 class="headLine">Makeup studio Bojan Vukadinov</h1>
 
         </div>
@@ -46,27 +45,6 @@ $baza = new DatabasePorudzbina("makeupstudiobojanvukadinov");
     <div class = "col-md-8">
         <div class = "row">
 
-            <?php
-                /*$crud->select();
-                while($red=$crud->getResult()->fetch_object()){
-            ?>
-
-            <div class = "col-md-3">
-                <h4><?php echo $red->naziv; ?></h4>
-                <img src = "<?php echo $red->slika; ?>" alt = "<?php echo $red->naziv; ?>" id = "images"/>
-                <p class = "price">Cena: <?php echo $red->cena; ?>RSD</p>
-                <!--<button type = "button" class = "dugme" data-tongle = "modal" data-target="#details-1">Dodaj u korpu</button>-->
-                <form action = "">
-                        <input type = "hidden" name = 'id' value="id proizvoda">
-                        <input type = "submit" name ='submit' value="Dodaj u korpu" class="dugme">
-                    </form>
-                <br>
-            </div>
-
-            <?php
-                }*/
-            ?>
-
             <?php if(count($korpa)>0) : ?>
 
             <?php
@@ -77,7 +55,6 @@ $baza = new DatabasePorudzbina("makeupstudiobojanvukadinov");
                 <h4><?php echo $proizvod->getNaziv(); ?></h4>
                 <img src = "<?php echo trim($proizvod->getSlika(), " "); ?>" alt = "<?php echo $proizvod->getNaziv(); ?>" id = "images"/>
                 <p class = "price">Cena: <?php echo $proizvod->getCena(); ?>RSD</p>
-                <!--<button type = "button" class = "dugme" data-tongle = "modal" data-target="#details-1">Dodaj u korpu</button>-->
                 <br>
             </div>
 
@@ -100,10 +77,6 @@ $baza = new DatabasePorudzbina("makeupstudiobojanvukadinov");
                         <a href="?" class="dugmeKorpa">Nastavi sa kupovinom</a><br>
                         <input type = "submit" name ='submit' value="Isprazni" class="dugmeKorpa"><br><br>
                     </form>
-
-            <!--<button class="dugmeKorpa"><a href="korpa.php" class="dugmeKorpa" target="_blank">Moja korpa</a></button><br>-->
-            <!--<button type = "button" class = "dugme1" data-tongle = "modal" data-target="#details-1"></button>-->
-    <!--<footer class = "text-center" id = "footer">&copy; Copyright 2019 Avon Cosmetics</footer>-->
     </div>
 
     </section>
@@ -116,9 +89,6 @@ $baza = new DatabasePorudzbina("makeupstudiobojanvukadinov");
                 <h1 class="title text-center"><b>PODACI ISPORUKE:</b></h1>
                 <form action="" method="post">
                 Korisnik: <?php echo $_SESSION['user'] ?> <br><br>
-            <!--Ime: <input type="text" name="imeDodavanje" id="tipTekst"><br><br>
-            Prezime: <input type="text" name="prezimeDodavanje" id="tipTekst2"><br><br>
-            Telefon: <input type="text" name="telefonDodavanje" id="tipTekst3"><br><br>-->
             Grad: <input type="text" name="gradDodavanje" id="tipTekst4"><br><br>
             Adresa: <input type="text" name="adresaDodavanje" id="tipTekst5"><br><br>
             Postanski broj: <input type="text" name="postanskiBrojDodavanje" id="tipTekst6"><br><br>
@@ -133,7 +103,6 @@ $baza = new DatabasePorudzbina("makeupstudiobojanvukadinov");
                 $kolone = "korisnik, grad, adresa, postanskiBroj, proizvodiId, ukupnaCena";
                 $insert = 'INSERT INTO porudzbine ('.$kolone.') VALUES ("'.$korisnik.'", "'.$grad.'", "'.$adresa.'", "'.$postanskiBroj.'", "'.$proizvodiId.'", "'.$ukupno.'")';
                 echo "Kupovina uspešno obavljena.";
-                /*$baza->insert("porudzbine", $ime, $prezime, $telefon, $grad, $adresa, $postanskiBroj, $proizvodiId, $ukupno, $kolone);*/
                 $baza->insert($insert);
             }
         ?>

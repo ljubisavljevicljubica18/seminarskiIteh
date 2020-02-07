@@ -7,12 +7,6 @@ $crud = new DatabaseNovo("makeupstudiobojanvukadinov");
 
 $proizvodi = array();
 
-//$crud->select("*", "avonproizvodi", null, "cena");
-/*$crud->select();
-while($red=$crud->getResult()->fetch_object()){
-    $proizvodi[] = new Proizvod($red->id, $red->naziv, $red->slika, $red->cena);
-}*/
-
 if (!isset ($_GET["id"])){
     echo "Parametar ID nije prosleđen!";
     } else {

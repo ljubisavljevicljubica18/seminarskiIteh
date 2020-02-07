@@ -166,12 +166,12 @@ $db = new Database("makeupstudiobojanvukadinov");
           <h1 class="title text-center"><b>ONLINE PRODAVNICA</b></h1>
 
           <div class="row text-center">
-                  <p>Veliki izbor paleta senki, karmina i četkica za šminkanje po najpovoljnijim cenama. Poručite vaš proizvod brzo i lako!</p>
+                  <p style="text-align:center;">Veliki izbor paleta senki, karmina i četkica za šminkanje po najpovoljnijim cenama. Poručite vaš proizvod brzo i lako!</p><br><br>
                   <img src="sminka1.jpg" style="position: center; width:1000px; height:auto; margin-left:70px;">
           </div><br>
 
-          <button class="btn-primary"><a href="dodatnaKatalog.php" class="btn-primary" target="_blank" style="text-position:center;">Pogledajte katalog</a></button><br>
-          <a href="anketa.php" class="anketa" target="_blank" style="text-position:center;">Ocenite rad online prodavnice<a>
+          <a href="dodatnaKatalog.php" class="btn btn-primary btn-xl text-uppercase" target="_blank" style="margin-left:40%">Pogledajte katalog</a><br>
+          <a href="anketa.php" class="anketa" target="_blank" style="margin-left:44%">Ocenite rad online prodavnice<a>
       </div>
     </section>
 
@@ -319,11 +319,8 @@ $db = new Database("makeupstudiobojanvukadinov");
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <!--<h2 class="text1">Škola šminkanja</h2>
-                <p class="text1">Već treću godinu Škola šminkanja Bojana Vukadinova predstavlja mesto okupljanja perspektivnih ljudi, koji žele da prikupe znanje i iskustvo u oblasti šminkanja. Kroz sjajnu atmosferu, rad sa kvalitetnih proizvodima i mentorom ovde se stiču neverovatne veštine i brzo napreduje. Prijave su u toku! Zauzmite vaše mesto na vreme.</p>-->
                 <h2 class="text1">Promocija novih paleta</h2>
                 <p class="text1">U subotu 01.02.2020. održana je prva po redu promocija novih paleta Bojana Vukadinova. U udobnom ambijentu hotela Metropol predstavljene su nove nijanse senki za kojima su devojke poludele. Nove palete uskoro izlaze u prodaju i moći ćete da ih nabavite putem našeg sajta, na stranici online prodavnice. </p>
-                <!--<a href="prijavaUSkolu.php" target="_blank" class="text-center">Prijavite se</a>-->
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
